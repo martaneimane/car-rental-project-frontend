@@ -1,18 +1,18 @@
 'use strict';
 
-angular.module('cars', ['ngRoute'])
+angular.module('bookings', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/cars', {
-            templateUrl: 'cars/cars.html',
-            controller: 'CarsCtrl',
+        $routeProvider.when('/bookings', {
+            templateUrl: 'bookings/bookings.html',
+            controller: 'BookingCtrl',
             cache: false
         });
     }])
 
-    .controller('CarsCtrl', ['$rootScope', '$scope', '$http', function ($rootScope, $scope, $httpClient) {
+    .controller('BookingCtrl', ['$rootScope', '$scope', '$http', function ($rootScope, $scope, $httpClient) {
         $scope.arrRec = [];
-        $httpClient.get("http://localhost:8080/api/v1/rest/Car/cars")
+        $httpClient.get("http://localhost:8080/api/v1/rest/Booking/bookings")
             .then(function (response) {
                 $scope.arrRec = response.data;
                 console.log($scope.arrRec);
