@@ -1,0 +1,43 @@
+
+<div class="container" ng-controller="registerCtrl">
+
+    <div id="isa_error" class="isa_error" style="visibility:hidden">
+        <i class="fa fa-times-circle">
+            <span id="error_msg_text"></span>
+        </i>
+    </div>
+
+    <form id="contact" ng-controller="registerCtrl" ng-submit="submit()" method="post">
+        <h3>Register</h3>
+        <fieldset>
+            <input id="name" ng-model="name"
+                   placeholder="Your Name" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+            <input id="surname" ng-model="surname"
+                   placeholder="Your Surname" type="text" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+            <input id="email" ng-model="email"
+                   placeholder="Your Email" type="email" tabindex="4" required>
+        </fieldset>
+        <fieldset>
+            <input id="address" ng-model="address"
+                   placeholder="Your Address" type="text" tabindex="4" required>
+        </fieldset>
+        <fieldset>
+            <input id="password" ng-model="password"
+                   placeholder="Your Password" type="password" tabindex="4" required>
+        </fieldset>
+        <fieldset>
+            <input id="password_re" ng-model="password_re"
+                   placeholder="Your Password again" type="password" tabindex="4" required>
+        </fieldset>
+
+        <fieldset>
+            <button name="submit" type="submit" id="contact-submit"
+                    data-submit="...Sending">Submit</button>
+        </fieldset>
+    </form>
+
+</div>
