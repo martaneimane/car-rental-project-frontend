@@ -15,10 +15,10 @@ angular.module('login', ['ngRoute'])
         function ($scope, $httpClient) {
             $scope.submit = function () {
 
-                console.log('Username: ' + $scope.username);
+                console.log('email: ' + $scope.email);
                 console.log('password: ' + $scope.password);
 
-                $httpClient.get("http://localhost:8080/api/v1/rest/Auth/auth(" + $scope.username + ")")
+                $httpClient.get("http://localhost:8080/api/v1/rest/Auth/auth(" + $scope.email + ")")
                     .then(function (response) {
 
                         console.log("FIRST RESPONSE === ");
@@ -28,7 +28,7 @@ angular.module('login', ['ngRoute'])
                             var cryptedPassResponse = response.date.token + "__" + $scope.password;
 
                             var authRequestDTO = {
-                                username: $scope.username,
+                                email: $scope.email,
                                 crypted_token: cryptedPassResponse
                             };
 
@@ -38,7 +38,7 @@ angular.module('login', ['ngRoute'])
                             $httpClient.post("http://localhost:8080/api/v1/rest/Auth/auth/login", postData)
                                 .then(function (response) {
                                     if (response.data.type === "ERROR") {
-                                        alert('AUTH FAILD: ' + response.data.message);
+                                        alert('AUTH FAILED: ' + response.data.message);
                                     }
                                     document.getElementById("auth_content").textContent = response.data.secretContent;
                                     console.log("Auth response: ");

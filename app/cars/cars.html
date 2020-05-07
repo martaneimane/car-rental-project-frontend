@@ -1,8 +1,17 @@
 <section>
     <!--for demo wrap-->
     <h1>CAR RENTAL FLEET OPTIONS</h1>
+
+    <form>
+        <label>Rent from:</label>
+        <input type="date">
+        <label>Rent untill:</label>
+        <input type="date">
+        <button>Check availability</button>
+    </form>
+
     <div class="tbl-header" ng-controller="CarsCtrl">
-        <table cellpadding="0" cellspacing="0" border="0">
+        <table id="carTable" cellpadding="0" cellspacing="0" border="0">
             <thead>
             <tr>
                 <th>Brand</th>

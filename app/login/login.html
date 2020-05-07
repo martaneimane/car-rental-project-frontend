@@ -1,9 +1,11 @@
-<div class="login">
-    <h1>Login</h1>
-    <form method="post">
+<body>
+<form ng-controller="loginCtrl" ng-submit="submit()">
+    <div class="login">
+        <h1>Login</h1>
         <input type="text" placeholder="E-mail" ng-model="email" name="email" required>
         <input type="password" placeholder="Password" ng-model="password" name="password" required>
         <button type="submit">Login</button>
         <p align="center"><a href="#">Register</a>
-    </form>
-</div>
+    </div>
+</form>
+</body>
