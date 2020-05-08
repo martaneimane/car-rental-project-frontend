@@ -1,5 +1,5 @@
 
-<div class="container" ng-controller="registerCtrl">
+<div class="register" ng-controller="registerCtrl">
 
     <div id="isa_error" class="isa_error" style="visibility:hidden">
         <i class="fa fa-times-circle">
@@ -8,7 +8,7 @@
     </div>
 
     <form id="contact" ng-controller="registerCtrl" ng-submit="submit()" method="post">
-        <h3>Register</h3>
+        <h1><b>Register</b></h1>
         <fieldset>
             <input id="name" ng-model="name"
                    placeholder="Your Name" type="text" tabindex="1" required autofocus>
@@ -35,7 +35,7 @@
         </fieldset>
 
         <fieldset>
-            <button name="submit" type="submit" id="contact-submit"
+            <button class="register_button" name="submit" type="submit" id="contact-submit"
                     data-submit="...Sending">Submit</button>
         </fieldset>
     </form>

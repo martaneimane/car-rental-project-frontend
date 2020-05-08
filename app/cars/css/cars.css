@@ -1,7 +1,44 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+.form{
+    box-sizing: border-box;
+}
+input{
+    width: 15%;
+    margin: 8px 0;
+    background-color: #333;
+    padding: 9px 23px;
+    border: none;
+    font-size: 16px;
+    border-radius: 0px;
+
+}
+input:hover{
+    filter:brightness(135%);
+
+}
+label{
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+
+}
+button{
+    color: white;
+    text-transform: uppercase;
+    background-color: #333;
+    font-size: 16px;
+    padding: 10px 24px;
+    border: none;
+    margin: 8px 0;
+}
+button:hover{
+    filter:brightness(135%);
+}
+
 h1{
     font-size: 30px;
-    color: #062F4F;
+    color: #333;
     text-transform: uppercase;
     font-weight: 300;
     text-align: left;
@@ -12,13 +49,13 @@ table{
     table-layout: fixed;
 }
 .tbl-header{
-    background-color: #B82601;
+    background-color: #333;
 }
 .tbl-content{
     height:300px;
     overflow-x:auto;
     margin-top: 0px;
-    border: 1px solid rgba(255,255,255,255);
+    border: 1px solid rgba(149,149,149,149);
 }
 th{
     padding: 20px 15px;
@@ -34,9 +71,9 @@ td{
     vertical-align:middle;
     font-weight: 500;
     font-size: 14px;
-    color: #B82601;
+    color: #333;
     border-bottom: solid 1px rgba(255,255,255,0.1);
-    border-bottom-color: #B82601;
+    border-bottom-color: #333;
 }
 /* demo styles */
 body{

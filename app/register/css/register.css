@@ -1,0 +1,16 @@
+.register{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width:300px;
+    height:300px;
+}
+
+.register h1 {
+    color: #333; text-shadow: 0 0 10px rgba(0, 0, 0, 0.09); letter-spacing:1px; text-align:center;
+    text-transform: uppercase}
+
+.register_button{
+    border-radius: 4px;
+}
